@@ -18,4 +18,4 @@ This bot monitors a specific Twitter/X account, analyzes the mood of their tweet
 
 ## Installation
 
-1. Clone the repository: 
+1. Clone the repository:

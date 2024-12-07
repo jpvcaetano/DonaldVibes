@@ -37,7 +37,7 @@ venv.bak/
 .DS_Store
 
 # Project specific
-config.py
+*.env
 *.log
 .coverage
 htmlcov/ 

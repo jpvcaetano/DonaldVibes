@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 tweepy = "^4.14.0"
 openai = "^1.57.0"
+python-dotenv = "^1.0.1"
 
 
 [build-system]
