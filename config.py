@@ -1,5 +1,6 @@
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -18,4 +19,4 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 TARGET_ACCOUNT = "realDonaldTrump"
 
 # How often to check for new tweets (in minutes)
-CHECK_INTERVAL = 60 
+CHECK_INTERVAL = 60
