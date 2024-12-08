@@ -1,6 +1,7 @@
-from openai import OpenAI
-from logger_config import setup_logger
 import httpx
+from openai import OpenAI
+
+from logger_config import setup_logger
 
 logger = setup_logger("mood_analyzer")
 

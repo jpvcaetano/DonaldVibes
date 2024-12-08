@@ -44,10 +44,6 @@ def main():
             if latest_tweet and str(latest_tweet.id) not in processed_tweets:
                 logger.info(f"New tweet found from {TARGET_ACCOUNT}")
 
-                # Save updated processed tweets to file
-                with open(processed_tweets_file, "w") as f:
-                    json.dump(list(processed_tweets), f)
-
                 # Analyze mood and post response
                 mood = mood_analyzer.analyze_mood(latest_tweet.text)
                 response_text = f"I am feeling {mood}."

@@ -23,12 +23,16 @@ class TwitterHandler:
             access_token_secret=access_token_secret,
             bearer_token=bearer_token,
         )
-        logger.info("Twitter handler initialized successfully")
+        # Verify credentials
+        try:
+            self.api.verify_credentials()
+            logger.info("Twitter handler initialized successfully")
+        except tweepy.errors.Unauthorized:
+            logger.error("Failed to authenticate with Twitter. Check your credentials.")
+            raise
 
     def get_latest_tweet(self, username):
-        tweets = self.client.get_users_tweets(
-            self.get_user_id(username), max_results=5, tweet_fields=["created_at"]
-        )
+        tweets = self.client.get_users_tweets(self.get_user_id(username), max_results=5)
         if not tweets.data:
             logger.warning(f"No tweets found for user {username}")
             return None
